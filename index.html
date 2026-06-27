@@ -1,0 +1,1082 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FRP Paras products Architecture and Design</title>
+
+	<link rel="shortcut icon" href="favicon.png">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/custom.css" />
+	<script src="https://unpkg.com/ionicons@4.3.0/dist/ionicons.js"></script>
+	<link href="css/style.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" href="css/responsive.css" />
+<!-- 	<link rel="stylesheet" href="css/ionicons.min.css" /> -->
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.3.0/collection/icon/icon.css"> -->
+
+
+</head>
+<body>
+
+	<div class="loader">
+		<div class="page-lines">
+			<div class="container">
+				<div class="col-line col-xs-4">
+					<div class="line"></div>
+				</div>
+				<div class="col-line col-xs-4">
+					<div class="line"></div>
+				</div>
+				<div class="col-line col-xs-4">
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>
+			</div>
+		</div>
+		<div class="loader-brand">
+			<div class="sk-folding-cube">
+				<div class="sk-cube1 sk-cube"></div>
+				<div class="sk-cube2 sk-cube"></div>
+				<div class="sk-cube4 sk-cube"></div>
+				<div class="sk-cube3 sk-cube"></div>
+			</div>
+		</div>
+	</div>
+
+	<header id="top" class="header-home">
+			<div class="brand-panel">
+				<a href="#top" class="brand js-target-scroll">
+				<!-- 	go<span class="text-primary">.</span>arch -->
+				<img src="img/logos.png" style="height: auto;width: 180px">
+				</a>
+				<!-- <div class="brand-name">Go.arch</div> -->
+				<div class="slide-number">
+					<span class="current-number text-primary">0<span class="count">1</span></span>
+					<!-- <sup><span class="delimiter">/</span> 0<span class="total-count"></span></sup> -->
+				</div>
+			</div>
+			<div class="header-phone">+91 20 41250002</div>
+			<div class="vertical-panel"></div>
+			<div class="vertical-panel-content">
+				<div class="vertical-panel-info">
+					<div class="vertical-panel-title">Architecture</div>
+					<div class="line"></div>
+				</div>
+				<ul class="social-list">
+					<li><a href="#" class="fa fa-instagram"></a></li>
+					<li><a href="#" class="fa fa-twitter"></a></li>
+					<li><a href="#" class="fa fa-behance"></a></li>
+					<li><a href="#" class="fa fa-facebook"></a></li>
+				</ul>
+			</div>
+
+			<nav class="navbar-desctop visible-md visible-lg">
+				<div class="container">
+					<a href="#top" class="brand js-target-scroll">
+						<img src="img/logos.png" style="height: auto;width: 86px">
+					</a>
+					<a href="menu/index.html">
+						<span class="treeline">&#9776;</span>
+					</a>
+				</div>
+			</nav>
+			
+			<nav class="navbar-mobile" >
+				<a href="#top" class="brand js-target-scroll">
+					<!-- go<span class="text-primary">.</span>arch -->
+					<img src="img/logos.png" style="height: auto;width: 180px">
+				</a>
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mobile">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<div class="collapse navbar-collapse " id="navbar-mobile">
+					<ul class="navbar-nav-mobile">
+						<li class="active">
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="about.html">About us</a>
+						</li>
+						<li>
+							<a href="projects.html">Projects</a>
+						</li>
+						<li>
+							<a href="service.html">Service</a>
+						</li>
+						<li>
+							<a href="career.html">Career</a>
+						</li>
+						<li>
+							<a href="contact.html">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+	</header>
+
+<div class="layout">
+	<main class="main">
+		<div class="arrow-left"></div>
+		<div class="arrow-right"></div>
+
+		<div class="rev_slider_wrapper">
+			<div id="rev_slider" class="rev_slider fullscreenbanner">
+				<ul>
+
+					<li data-transition="slotzoom-horizontal" data-slotamount="7" data-masterspeed="1000" data-fsmasterspeed="1000">
+						<img src="img/slider/slide5.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
+
+							<div class="slide-title tp-caption tp-resizeme"
+							 data-x="['middle','middle','middle','middle']" 
+							 data-hoffset="['-18','50','50','-18']" 
+							 data-y="['middle','middle','middle','middle']" 
+							 data-voffset="['-360','-200','-625', '-525']" 
+							 data-fontsize="['40','40', '50']" 
+							 data-lineheight="['80','75', '75']" 
+							 data-width="['1100','700','550']" 
+							 data-height="none" 
+							 data-whitespace="normal" 
+							 data-transform_idle="o:1;" 
+							 data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+							 data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
+							 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
+							 data-start="500" 
+							 data-splitin="chars" 
+							 data-splitout="none" 
+							 data-responsive_offset="on" d
+							 ata-elementdelay="0.05"
+							 style="text-align: center;">
+							INTERIOR DESIGNING
+						</div>
+
+						<div class="pinPoint-wrp"> 	
+							<svg id="pathLine" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2067.32 319.89">
+								<!-- <path id="line_svgPath" d="M 3.4102362,786.86403 C 118.2698,726.78722 234.06389,666.2216 338.07322,661.10003 442.08255,655.97846 534.77525,706.05651 646.22603,686.77865 757.67681,667.50079 888.30025,578.58517 1031.65,548.42467 c 143.3497,-30.1605 299.6339,-1.70706 407.4158,-25.60797 107.7819,-23.9009 167.0621,-100.15607 239.8147,-149.66479 72.7526,-49.50871 158.9786,-72.2715 215.0251,-130.31634 56.0465,-58.04483 81.9142,-151.372174 95.3869,-197.466511 13.4727,-46.09433735 14.5505,-44.95615101 15.6283,-43.8180288" transform="translate(134.78 -413.79)" style="fill:none;stroke:#221f90;stroke-miterlimit:20;"/> -->
+							</svg>
+							<div class="pinPointSvgwrp">
+								<div class="hidden-xs hidden-sm">
+									<a class="pinPoint pinP-1" data-tab="tab-1">
+										<i class="fa fa-codepen icon-pin fa-2x"></i> 
+									 	<span>Civil <br>Work</span>
+									 </a>		 
+									<a class="pinPoint pinP-2" data-tab="tab-2">
+										<i class="fa fa-puzzle-piece icon-pin fa-2x"></i>
+									 	<span>Design Support &<br> Planning</span>
+									 </a>
+									<a class="pinPoint pinP-3" data-tab="tab-3">
+										<i class="fa fa-wrench icon-pin fa-2x"></i>
+										<span>MEP Mechanical, <br>Electrical Plumbing</span>
+									</a>
+									<a class="pinPoint pinP-4" data-tab="tab-4"> 
+									<i class="fa fa-home icon-pin fa-2x"></i>
+									<span>Turnkey <br>Interior Work</span>
+									</a>	
+								</div>
+								<div class="mobile-pins visible-sm visible-xs">
+									<ul class="mobile-pinslist">
+										<li>
+											<a class="pinPoint pinP-1" data-tab="tab-1">
+												<i class="fa fa-codepen icon-pin fa-2x"></i> 
+												 <span>Civil Work</span>
+											</a>	
+										</li>
+										<li>
+											<a class="pinPoint pinP-2" data-tab="tab-2">
+												<i class="fa fa-puzzle-piece icon-pin fa-2x"></i>
+											 	<span>Design Support & Planning</span>
+											</a>
+										</li>
+										<li>
+											<a class="pinPoint pinP-3" data-tab="tab-3">
+												<i class="fa fa-wrench icon-pin fa-2x"></i>
+												<span>MEP Mechanical, Electrical Plumbing</span>
+											</a>
+										</li>
+										<li>
+											<a class="pinPoint pinP-4" data-tab="tab-4"> 
+												<i class="fa fa-home icon-pin fa-2x"></i>
+												<span>Turnkey Interior Work</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="container-fluid">	
+								<!--<span class="ripple"></span>-->
+								<div id="tab-1" class="pp-content pinP-1 ms3-hide">
+									<div class="pp_imgwrp">
+										<p class="supHead">Civil & Structural Construction</p>
+										<h2>Quality Built Efficiently</h2>					
+										<p class="lead">Our team of CAD professionals carry out, as-built drawings, soft drawings and various minor changes & modifications to the design for accurate execution.</p>
+									</div>
+								</div>
+								<!--tab-1-->
+								<div id="tab-2" class="pp-content pinP-2">
+									<div class="pp_imgwrp">
+										<p class="supHead">Design Support & Planning</p>
+										<h2>Achieving Perfection</h2>
+										<p class="lead">Our team of CAD professionals carry out, as-built drawings, soft drawings and various minor changes & modifications to the design for accurate execution.</p>
+									</div>
+								</div>
+								<!--tab-2-->
+								<div id="tab-3" class="pp-content pinP-3">
+									<div class="pp_imgwrp">
+										<p class="supHead">Mechanical, Electrical & Plumbing</p>
+										<h2>Providing Modern Day MEP Solutions</h2>					
+										<p class="lead">Our team of CAD professionals carry out, as-built drawings, soft drawings and various minor changes & modifications to the design for accurate execution..</p>
+									</div>
+								</div>
+								<!--tab-3-->
+								<div id="tab-4" class="pp-content pinP-4">
+									<div class="pp_imgwrp">
+										<p class="supHead">Turnkey Interior Work</p>
+										<h2>Built for a Better Tomorrow</h2>					
+										<p class="lead">Our team of CAD professionals carry out, as-built drawings, soft drawings and various minor changes & modifications to the design for accurate execution.</p>
+									</div>
+								</div>
+								<!--tab-4--> 
+						</div>
+					</li>
+				
+					<li data-transition="slotzoom-horizontal" data-slotamount="7" data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="1000">
+					<img src="img/slider/slide3.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" usemap="#image-map">
+
+					    <div class="a">
+							<div class="b">
+								<div class="c">
+									<div class="row ">
+										<div class=" col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-5 col-sm-10 col-sm-offset-4 col-xs-10 col-xs-offset-1 lock-center">
+											<div class="row col-secondary " >
+
+												<div class="col-lg-6 col-sm-8 col-md-8  col-space-20">
+													<article class="recent-post">
+														<a href="#"></a>
+														<div class="recent-post-thumbnail parallelogram">
+															<img alt="" src="img/blog/1.jpg" class="wp-post-image">
+														</div>
+														<div class="recent-post-body padding-10px-top ">
+															<h4 class="recent-post-title recent-post-time ">
+																Creativity can provide all that which is required make your advertising an
+															</h4>
+														</div>
+													</article>
+
+													<article class="recent-post">
+														<a href="#"></a>
+														<div class="recent-post-thumbnail parallelogram">
+															<img alt="" src="img/blog/2.jpg" class="wp-post-image">
+														</div>
+														<div class="recent-post-body padding-10px-top ">
+															<h4 class="recent-post-title recent-post-time ">
+																Creativity can provide all that which is required make your advertising an
+															</h4>
+														</div>
+													</article>
+
+													<article class="recent-post">
+														<a href="#"></a>
+														<div class="recent-post-thumbnail parallelogram">
+															<img alt="" src="img/blog/3.jpg" class="wp-post-image">
+														</div>
+														<div class="recent-post-body padding-10px-top ">
+															<h4 class="recent-post-title recent-post-time ">
+																Creativity can provide all that which is required make your advertising an
+															</h4>
+														</div>
+													</article>
+												</div>
+												<div class="col-lg-6 col-sm-8 col-md-8 col-space-15">
+													<article class="recent-post">
+														<a href="#"></a>
+														<div class="recent-post-thumbnail parallelogram">
+															<img alt="" src="img/blog/4.jpg" class="wp-post-image">
+														</div>
+														<div class="recent-post-body padding-10px-top ">
+															<h4 class="recent-post-title recent-post-time ">
+																Creativity can provide all that which is required make your advertising an
+															</h4>
+														</div>
+													</article>
+													<article class="recent-post">
+														<a href="#"></a>
+														<div class="recent-post-thumbnail parallelogram">
+															<img alt="" src="img/blog/5.jpg" class="wp-post-image">
+														</div>
+														<div class="recent-post-body padding-10px-top ">
+															<h4 class="recent-post-title recent-post-time ">
+																Creativity can provide all that which is required make your advertising an
+															</h4>
+														</div>
+													</article>
+													<article class="recent-post">
+														<a href="#"></a>
+														<div class="recent-post-thumbnail parallelogram">
+															<img alt="" src="img/blog/6.jpg" class="wp-post-image">
+														</div>
+														<div class="recent-post-body padding-10px-top ">
+															<h4 class="recent-post-title recent-post-time ">
+																Creativity can provide all that which is required make your advertising an
+															</h4>
+														</div>
+													</article>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li data-transition="slotzoom-horizontal" data-slotamount="7" data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="1000">
+						<img src="img/slider/img-slide-4.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" usemap="#image-map">
+							<div class="a">
+								<div class="b">
+									<div class="c">
+										<div class="row">
+											<div class=" col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-5 col-sm-10 col-sm-offset-2 col-xs-10 col-xs-offset-1 lock-center">
+												<div class="row col-thired">
+													<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-20px-top">
+															<a href="#" class="post-thum">
+															<div class="recent-post-thumbnail">
+																<img alt="" src="img/img-icon/Civil&Construction.png" class="wp-post-image">
+															</div>
+															<div class="recent-post-body">
+															<h4 class="recent-post-title">Civil & Construction</h4>
+															</div>
+															</a>
+													</div>
+													<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6  margin-20px-top">
+														<a href="#" class="post-thum">
+															<div class="recent-post-thumbnail">
+																<img alt="" src="img/img-icon/FireDetection&Suppression.png" class="wp-post-image">
+															</div>
+															<div class="recent-post-body">
+																<h4 class="recent-post-title">Fire Detection & Suppression</h4>
+															</div>
+															</a>
+													</div>
+													<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-20px-top">
+														<a href="#" class="post-thum">
+															<div class="recent-post-thumbnail">
+																<img alt="" src="img/img-icon/Flooring.png" class="wp-post-image">
+															</div>
+															<div class="recent-post-body">
+																<h4 class="recent-post-title">Flooring</h4>
+															</div>
+															</a>
+													</div>
+													<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-20px-top">
+														<a href="#" class="post-thum">
+															<div class="recent-post-thumbnail">
+																<img alt="" src="img/img-icon/Plumbing&SanitaryWork.png" class="wp-post-image">
+															</div>
+															<div class="recent-post-body">
+															<h4 class="recent-post-title">Plumbing & Sanitary Work</h4>
+															</div>
+														</a>
+													</div>
+													<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-20px-top">
+														<a href="#" class="post-thum">
+															<div class="recent-post-thumbnail">
+																<img alt="" src="img/img-icon/wallPartitions.png" class="wp-post-image">
+															</div>
+															<div class="recent-post-body">
+															<h4 class="recent-post-title">Dry wall Partitions</h4>
+															</div>
+														</a>
+													</div>
+													<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-20px-top">
+														<a href="#" class="post-thum">
+															<div class="recent-post-thumbnail">
+																<img alt="" src="img/img-icon/ElectricalWork.png" class="wp-post-image">
+															</div>
+															<div class="recent-post-body">
+															<h4 class="recent-post-title">Electrical Work</h4>
+															</div>
+														</a>
+													</div>
+													<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-20px-top">
+														<a href="#" class="post-thum">
+															<div class="recent-post-thumbnail">
+																<img alt="" src="img/img-icon/HVAC.png" class="wp-post-image">
+															</div>
+															<div class="recent-post-body">
+															<h4 class="recent-post-title">HVAC</h4>
+															</div>
+														</a>
+													</div>
+													<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-20px-top">
+														<a href="#" class="post-thum">
+															<div class="recent-post-thumbnail">
+																<img alt="" src="img/img-icon/CommercialInteriorFitouts.png" class="wp-post-image">
+															</div>
+															<div class="recent-post-body">
+															<h4 class="recent-post-title">Commercial Interior Fitouts</h4>
+															</div>
+														</a>
+													</div>
+													<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-20px-top">
+														<a href="#" class="post-thum">
+															<div class="recent-post-thumbnail">
+																<img alt="" src="img/img-icon/InteriorFinishing.png" class="wp-post-image">
+															</div>
+															<div class="recent-post-body">
+															<h4 class="recent-post-title">Interior Finishing</h4>
+															</div>
+														</a>
+													</div>
+													<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-20px-top">
+														<a href="#" class="post-thum">
+															<div class="recent-post-thumbnail">
+																<img alt="" src="img/img-icon/MetalFabricationWork.png" class="wp-post-image">
+															</div>
+															<div class="recent-post-body">
+															<h4 class="recent-post-title">Metal Fabrication Work</h4>
+															</div>
+														</a>
+													</div>
+													<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-20px-top">
+														<a href="#" class="post-thum">
+															<div class="recent-post-thumbnail">
+																<img alt="" src="img/img-icon/BuildingManagementSystem.png" class="wp-post-image">
+															</div>
+															<div class="recent-post-body">
+															<h4 class="recent-post-title">Building Management System</h4>
+															</div>
+														</a>
+													</div>
+													<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-20px-top">
+														<a href="#" class="post-thum">
+															<div class="recent-post-thumbnail">
+																<img alt="" src="img/img-icon/SecuritySystems.png" class="wp-post-image">
+															</div>
+															<div class="recent-post-body">
+															<h4 class="recent-post-title">Security Systems</h4>
+															</div>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						<!-- <div class="pinPoint-wrp "> 	
+							<div class="pinPointSvgwrp">
+							<div class="hidden-xs hidden-sm">
+								<a class="pinPoint pinPs-4" data-tab="slide-tab-4"> <span>Turnkey <br>Interior Work</span></a>	
+							</div>
+								<div class="mobile-pins visible-sm visible-xs"><ul class="mobile-pinslist">
+									<li><a class="pinPoint pinPs-4" data-tab="slide-tab-4"> <span>Turnkey  Interior Work</span></a></li></ul></div>
+								</div>
+						</div> -->
+
+						<div class="container-fluid">	
+								<!--tab-3-->
+								<div id="slide-tab-4" class="pp-content pinPs-4">
+									<div class="row">
+										<div class="col-md-12">
+											<div >
+												<article class="recent-post">
+													<div class="recent-post-thumbnail">
+														<a href="#"><img alt="" src="img/blog/1-149x108.jpg" class="wp-post-image"></a>
+													</div>
+													<div class="recent-post-body">
+														<h4 class="recent-post-title">
+															<a href="#">Creativity can provide all that which is required make your advertising an</a>
+														</h4>
+														<div class="recent-post-time">June, 16</div>
+													</div>
+												</article>
+												<article class="recent-post">
+													<div class="recent-post-thumbnail">
+														<a href="#"><img alt="" src="img/blog/2-149x108.jpg" class="wp-post-image"></a>
+													</div>
+													<div class="recent-post-body">
+														<h4 class="recent-post-title">
+															<a href="#">Creativity can provide all that which is required make your advertising an</a>
+														</h4>
+														<div class="recent-post-time">June, 16</div>
+													</div>
+												</article>
+												<article class="recent-post">
+													<div class="recent-post-thumbnail">
+														<a href="#"><img alt="" src="img/blog/3-149x108.jpg" class="wp-post-image"></a>
+													</div>
+													<div class="recent-post-body">
+														<h4 class="recent-post-title">
+															<a href="#">Creativity can provide all that which is required make your advertising an</a>
+														</h4>
+														<div class="recent-post-time">June, 16</div>
+													</div>
+												</article>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--tab-4--> 
+						</div>
+					</li>
+
+					
+
+					<li data-transition="slotzoom-horizontal" data-slotamount="7" data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="1000">
+
+						<img src="img/slider/slide2.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
+
+						<div class="slide-title tp-caption tp-resizeme"
+							 data-x="['middle','middle','middle','middle']" 
+							 data-hoffset="['-18','-18','50','-18']" 
+							 data-y="['middle','middle','middle','middle']" 
+							 data-voffset="['-35','-180','-425', '-425']" 
+							 data-fontsize="['40','40', '70']" 
+							 data-lineheight="['80','75', '75']" 
+							 data-width="['1100','700','550']" 
+							 data-height="none" 
+							 data-whitespace="normal" 
+							 data-transform_idle="o:1;" 
+							 data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+							 data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
+							 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
+							 data-start="500" 
+							 data-splitin="chars" 
+							 data-splitout="none" 
+							 data-responsive_offset="on" d
+							 ata-elementdelay="0.05"
+							 style="text-align: center;">
+							INTERIOR DESIGNING
+							</div>
+
+						<div class="slide-subtitle  tp-caption  bannerTxt tp-resizeme" 
+	                        data-x="['center','right','center','center']"
+	                        data-hoffset="['00','20','0','-101']"
+	                        data-y="['middle','bottom','middle','middle']"
+	                        data-voffset="['-100','32','150','221']"
+	                        data-width="['300','366','800','500']"
+	                        data-height="['300','300','500','300']"  
+							data-fontsize="['20','14','30', '23]"
+							data-fontweight ="400"
+							data-whitespace="initial" 
+							data-lineheight="25px"
+							data-transform_idle="o:1;" 
+							data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1200;e:Power1.easeInOut;" data-transform_out="opacity:0;s:1000;s:1000;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-start="1500" data-splitin="none" data-splitout="none" 
+							style="z-index: 8; padding: 20px 20px 10px  30px; text-align: left;">
+							    <h3>architecture of a new generation</h3>
+							    <hr>
+								<p>Modern Hotel is the architecture of a new generation, a building<br> 
+								that exists not only in the dimension of space,<br>
+								but also in the dimension of time and communication.
+								</p>
+						</div>
+
+						<!-- LAYER NR. 4 -->
+                            <div class="tp-caption   tp-resizeme rs-parallaxlevel-8" id="slide-65-layer-6"
+                             data-x="['right','center','center','center']"
+                             data-hoffset="['500','230','-163','-101']"
+                             data-y="['bottom','middle','middle','middle']"
+                             data-voffset="['-100','0','286','221']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+                             data-transform_idle="o:1;"
+                             data-transform_in="y:bottom;s:500;e:Power2.easeInOut;"
+                             data-transform_out="y:bottom;s:500;e:Linear.easeNone;s:500;e:Linear.easeNone;"
+                             data-start="990"
+                             data-responsive_offset="on"
+                             data-end="300000" style="z-index: 8;">
+
+                            <!--  <iframe width="540" height="300" poster="img/projects/1-480x880.jpg" src="https://www.youtube.com/embed/UYrSo_4GIEc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe> -->
+
+						    <!-- <img src="img/projects/1-480x880.jpg" alt="" width="538" height="886"
+                             data-ww="['538px','538px','432px','183px']"
+                             data-hh="['886px','886px','713px','303px']"
+                             data-lazyload="img/projects/1-480x880.jpg"
+                             data-no-retina> -->
+                            
+                            </div>
+
+                            <!-- LAYER NR. 4 -->
+                            <div class="tp-caption   tp-resizeme rs-parallaxlevel-8" id="slide-65-layer-6"
+                             data-x="['right','center','center','center']"
+                             data-hoffset="['300','400','-163','-101']"
+                             data-y="['bottom','middle','middle','middle']"
+                             data-voffset="['-100','0','286','221']"
+                             data-width="['300','400','700','500']"
+                             data-height="['300','300','700','500']"
+                             data-whitespace="nowrap"
+                             data-transform_idle="o:1;"
+                             data-transform_in="y:bottom;s:500;e:Power2.easeInOut;"
+                             data-transform_out="y:bottom;s:500;e:Linear.easeNone;s:500;e:Linear.easeNone;"
+                             data-start="990"
+                             data-responsive_offset="on"
+                             data-end="300000" style="z-index: -0;">
+
+						   <!--   <img src="img/projects/1-480x880.jpg" alt="" width="538" height="886"
+                             data-ww="['538px','538px','432px','183px']"
+                             data-hh="['886px','886px','713px','303px']"
+                             data-lazyload="img/projects/1-480x880.jpg"
+                             data-no-retina> -->
+                          
+                            </div>
+					</li>
+
+					
+				</ul>
+			</div>
+		</div>
+	</main>
+		<div class="content">
+			<section id="about" class="about section">
+				<div class="container">
+					<header class="section-header">
+						<h2 class="section-title">About <span class="text-primary">FRP Paras</span></h2>
+						<strong class="fade-title-left">About</strong>
+					</header>
+					<div class="section-content">
+						<div class="row-base row">
+							<div class="col-base col-sm-6 col-md-4">
+								<h3 class="col-about-title">we turn ideas into works of art<span class="text-primary">.</span></h3>
+								<div class="col-about-info">
+									<p>The FRP Paras products Pvt. Ltd. specialising in Architectural, Interior Designing, as well as in landscaping.<br>
+									Combining these fields it successfully provided a complete service to its clients, notjust creating the structural architectural shell, but designing it with an understanding of the interior spaces, and what possibilities could be created on the inside.<br>
+									Designed and built across India, Flexible, creative and dynamic in creations. The FRP Paras products Pvt. Ltd. portfolio ranges</p>
+								</div>
+							</div>
+							<div class="col-base col-about-spec col-sm-6 col-md-4">
+								<!-- <h3 class="col-about-title">our<br> specialization<span class="text-primary">:</span></h3> -->
+								<div class="service-item">
+									<img alt="" width="46" src="img/img-icon/build.png">
+									<h4>DESIGN  AND BUILD</h4>
+								</div>
+								<div class="service-item">
+									<img alt="" width="46" src="img/img-icon/icon-architecture.png">
+									<h4>Architecture</h4>
+								</div>
+								<div class="service-item">
+									<img alt="" width="58" src="img/img-icon/icon-interiors.png">
+									<h4>Interiors</h4>
+								</div>
+								<div class="service-item">
+									<img alt="" width="58" src="img/img-icon/icon-planing.png">
+									<h4>Planing</h4>
+								</div>
+							</div>
+							<div class="clearfix visible-sm"></div>
+							<div class="col-base col-about-img col-sm-6 col-md-4">
+								<img alt="" class="img-responsive" src="img/380x370.jpg">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="projects section">
+				<div class="container">
+					<h2 class="section-title">Our <span class="text-primary">projects</span></h2>
+				</div>
+				<div class="js-projects-gallery section-content">
+					<div class="row">
+						<div class="project project-light col-sm-6 col-md-4 col-lg-3">
+							<a href="img/projects/1-480x880.jpg" title="Residential care project in Paris">
+								<figure>
+									<img alt="" src="img/projects/1-480x880.jpg">
+									<figcaption>
+										<h3 class="project-title">
+											Avalara <br>Pune
+										</h3>
+										<h4 class="project-category">
+											Architecture
+										</h4>
+										<div class="project-zoom"></div>
+									</figcaption>
+								</figure>
+							</a>
+						</div>
+						<div class="project project-light col-sm-6 col-md-4 col-lg-3">
+							<a href="img/projects/2-480x880.jpg" title="Concert hall in New york">
+								<figure>
+									<img alt="" src="img/projects/2-480x880.jpg">
+									<figcaption>
+										<h3 class="project-title">
+											Faurecia<br> Bhosri
+										</h3>
+										<h4 class="project-category">
+											Interior
+										</h4>
+										<div class="project-zoom"></div>
+									</figcaption>
+								</figure>
+							</a>
+						</div>
+						<div class="project project-light col-sm-6 col-md-4 col-lg-3">
+							<a href="img/projects/3-480x880.jpg" title="Modern hotel in London">
+								<figure>
+									<img alt="" src="img/projects/3-480x880.jpg">
+									<figcaption>
+										<h3 class="project-title">
+											Navigate<br> Consultants
+										</h3>
+										<h4 class="project-category">
+											Architecture
+										</h4>
+										<div class="project-zoom"></div>
+									</figcaption>
+								</figure>
+							</a>
+						</div>
+						<div class="project project-light col-sm-6 col-md-4 col-lg-3">
+							<a href="img/projects/4-480x880.jpg" title="Modern hotel in London">
+								<figure>
+									<img alt="" src="img/projects/4-480x880.jpg">
+									<figcaption>
+										<h3 class="project-title">
+											Equal Experts<br> Kalyani Nagar
+										</h3>
+										<h4 class="project-category">
+											Interior
+										</h4>
+										<div class="project-zoom"></div>
+									</figcaption>
+								</figure>
+							</a>
+						</div>
+						<div class="project project-light col-sm-6 col-md-4 col-lg-3">
+							<a href="img/projects/5-480x880.jpg" title="Modern Livingroom in New York">
+								<figure>
+									<img alt="" src="img/projects/5-480x880.jpg">
+									<figcaption>
+										<h3 class="project-title">
+											Jamna Automobiles<br> Chinchwad
+										</h3>
+										<h4 class="project-category">
+											Architecture
+										</h4>
+										<div class="project-zoom"></div>
+									</figcaption>
+								</figure>
+							</a>
+						</div>
+						<div class="project project-light col-sm-6 col-md-4 col-lg-3">
+							<a href="img/projects/6-480x880.jpg" title="Observatory plan In moscow">
+								<figure>
+									<img alt="" src="img/projects/6-480x880.jpg">
+									<figcaption>
+										<h3 class="project-title">
+											Globacomm LLC<br> Pune
+										</h3>
+										<h4 class="project-category">
+											Interior
+										</h4>
+										<div class="project-zoom"></div>
+									</figcaption>
+								</figure>
+							</a>
+						</div>
+						<div class="project project-light col-sm-6 col-md-4 col-lg-3">
+							<a href="img/projects/7-480x880.jpg" title="Townhouse design in Chicago">
+								<figure>
+									<img alt="" src="img/projects/7-480x880.jpg">
+									<figcaption>
+										<h3 class="project-title">
+											Xpointer<br> Consulting
+										</h3>
+										<h4 class="project-category">
+											Architecture
+										</h4>
+										<div class="project-zoom"></div>
+									</figcaption>
+								</figure>
+							</a>
+						</div>
+						<div class="project project-light col-sm-6 col-md-4 col-lg-3">
+							<a href="img/projects/8-480x880.jpg" title="National Library in Madrid">
+								<figure>
+									<img alt="" src="img/projects/8-480x880.jpg">
+									<figcaption>
+										<h3 class="project-title">
+											Integrative<br> Systems
+										</h3>
+										<h4 class="project-category">
+											Interior
+										</h4>
+										<div class="project-zoom"></div>
+									</figcaption>
+								</figure>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="section-content text-center">
+					<a href="#" class="btn btn-gray">More projects</a>
+				</div>
+			</section>
+
+			<section class="experience section">
+				<div class="container">
+					<div class="text-parallax" data-stellar-background-ratio="0.85" style="background-image: url('img/bg/text-1.jpg');">
+						<div class="text-parallax-content">10</div>
+					</div>
+					<h4 class="experience-info wow fadeInRight"><span class="text-primary">Years of successful work</span><br> in the market</h4>
+				</div>
+			</section>
+
+			<section class="clients section">
+				<div class="container">
+					<header class="section-header">
+						<h2 class="section-title">Our <span class="text-primary">clients</span></h2>
+						<strong class="fade-title-left">clients</strong>
+					</header>
+					<div class="section-content">
+			            <ul class="clients-list">
+			              <li class="client">
+			                <a href="#"><img alt="" src="img/clients/1.png"></a>
+			              </li>
+			              <li class="client">
+			                <a href="#"><img alt="" src="img/clients/2.png"></a>
+			              </li>
+			              <li class="client">
+			                <a href="#"><img alt="" src="img/clients/3.png"></a>
+			              </li>
+			              <li class="client">
+			                <a href="#"><img alt="" src="img/clients/4.png"></a>
+			              </li>
+			              <li class="client">
+			                <a href="#"><img alt="" src="img/clients/5.png"></a>
+			              </li>
+			              <li class="client">
+			                <a href="#"><img alt="" src="img/clients/1.png"></a>
+			              </li>
+			              <li class="client">
+			                <a href="#"><img alt="" src="img/clients/2.png"></a>
+			              </li>
+			              <li class="client">
+			                <a href="#"><img alt="" src="img/clients/3.png"></a>
+			              </li>
+			              <li class="client">
+			                <a href="#"><img alt="" src="img/clients/4.png"></a>
+			              </li>
+			              <li class="client">
+			                <a href="#"><img alt="" src="img/clients/5.png"></a>
+			              </li>
+			            </ul>
+			          </div>
+					<div class="section-content">
+						<a href="#" class="btn btn-shadow-2">Work together <i class="icon-next"></i></a>
+					</div>
+				</div>
+			</section>
+
+
+
+			<section class="contacts section">
+				<div class="container">
+					<header class="section-header">
+						<h2 class="section-title">Get <span class="text-primary">in touch</span></h2>
+						<strong class="fade-title-right">contacts</strong>
+					</header>
+					<div class="section-content">
+						<div class="row-base row">
+							<div class=" col-base col-md-6">
+								<div class="row">
+									<div class="col-md-12 padding-10px-top">
+									+91 20 41250002
+									</div>
+									<div class="col-md-12 padding-10px-top">
+									frpparaspvtltd@gmail.com
+									</div>
+									<div class="col-md-12 padding-10px-top">
+										  Off. No. 39, 4th Floor, B Wing,<br>
+										  Bandal Dhankude Plaza,<br>
+										  Kothrud Depo, Pune- 411038.
+									</div>
+								</div>
+							</div>
+							<div class="col-base  col-md-6">
+								<form class="js-ajax-form">
+									<div class="row-field row">
+										<div class="col-field col-sm-6 col-md-6">
+											<div class="form-group">
+												<input type="text" class="form-control" name="name" required placeholder="Name">
+											</div>
+										</div>
+
+										<div class="col-field col-sm-6 col-md-6">
+											<div class="form-group">
+												<input type="email" class="form-control" name="email" required placeholder="Email *">
+											</div>
+										</div>
+										<div class="col-field col-sm-6 col-md-6">
+											<div class="form-group">
+												<input type="tel" class="form-control" name="phone" placeholder="Phone">
+											</div>
+										</div>
+
+										<div class="col-field col-sm-6 col-md-6">
+											<div class="form-group">
+												<input type="text" class="form-control" name="company" placeholder="Company">
+											</div>
+										</div>
+										<div class="col-field col-sm-12 col-md-12>
+											<div class="form-group">
+												<textarea class="form-control" rows="2" name="message" placeholder="Message"></textarea>
+											</div>
+										</div>
+										<div class=" col-field col-sm-12 col-md-7">
+										<div class="form-submit text-right"><button type="submit" class="btn btn-shadow-2 wow swing">Send <i class="icon-next"></i></button></div>
+										</div>
+										<div class="col-message col-field col-sm-12 col-md-12">
+											<div class="form-group">
+												<div class="success-message"><i class="fa fa-check text-primary"></i> Thank you!. Your message is successfully sent...</div>
+												<div class="error-message">We're sorry, but something went wrong</div>
+											</div>
+										</div>
+										
+									</div>
+									
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<footer id="footer" class="footer">
+				<div class="container">
+					<div class="row-base row">
+						<div class="col-base text-left-md col-md-4">
+							<a href="index.html" class="brand">
+								<img src="img/logos.png" style="height: auto;width: 180px">
+							</a>
+						</div>
+						<div class="text-center-md col-base col-md-4">
+							<a href="https://themeforest.net/user/murren20" class="author-link">
+								
+							</a>
+						</div>
+						<div class="text-right-md col-base col-md-4">
+							© Copyright 2023 FRP Paras All Rights Reserved.
+						</div>
+					</div>
+				</div>
+			</footer>
+
+			<div class="page-lines">
+				<div class="container">
+					<div class="col-line col-xs-4">
+						<div class="line"></div>
+					</div>
+					<div class="col-line col-xs-4">
+						<div class="line"></div>
+					</div>
+					<div class="col-line col-xs-4">
+						<div class="line"></div>
+						<div class="line"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function openNav() {
+			document.getElementById("myNav").style.width = "100%";
+		}
+
+		function closeNav() {
+			document.getElementById("myNav").style.width = "0%";
+		}
+	</script>
+	<script data-cfasync="false" src="http://paul-themes.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery.min.js"></script>
+
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/smoothscroll.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/jquery.magnific-popup.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+
+	<script src="js/rev-slider/jquery.themepunch.tools.min.js"></script>
+	<script src="js/rev-slider/jquery.themepunch.revolution.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+	<script src="assets/plugin/fullpage/jquery-2.1.4.js"></script> 
+	<script src="js/rev-slider/revolution.extension.actions.min.js"></script>
+	<script src="js/rev-slider/revolution.extension.carousel.min.js"></script>
+	<script src="js/rev-slider/revolution.extension.kenburn.min.js"></script>
+	<script src="js/rev-slider/revolution.extension.layeranimation.min.js"></script>
+	<script src="js/rev-slider/revolution.extension.migration.min.js"></script>
+	<script src="js/rev-slider/revolution.extension.navigation.min.js"></script>
+	<script src="js/rev-slider/revolution.extension.parallax.min.js"></script>
+	<script src="js/rev-slider/revolution.extension.slideanims.min.js"></script>
+	<script src="js/rev-slider/revolution.extension.video.min.js"></script>
+	<script src="js/interface.js"></script>
+
+	<script>
+		var tl = new TimelineMax()
+		.to(".loader", 0.5, { scale:0.0, opacity:0, ease: Power1.easeInOut})
+		.to(".heroBanner", 1, {opacity:1, ease: Power1.easeInOut},"-=.07")
+		.from(".heroBanner", 1, {width:"100%", height:"100vh", left:0, top:0, ease: Power1.easeInOut},"-=1.3")
+		.staggerTo(".pinPoint", 0.5, {opacity:1, scale:1,/*repeat:2, yoyo:true, repeatDelay:1,*/ delay:0.5, ease: Power1.easeInOut}, 0.1) 
+		.to(".mask_banner", 1.5, {width:0, ease: Power1.easeInOut}, "-=2" ) 
+		.to(".overlay_hero", 0.5, { opacity:0 } )
+		.from(".BannerTxt", 0.5, { opacity:0, y:"-10%" } )
+		.from(".BannerBtn_wrp", 0.5, { opacity:0, y:"-10%" } )
+		.to("#tab-1", 1, {className:'-=ms3-hide',  ease: Power1.easeInOut},"-=3.8");
+
+
+		$('a.pinPoint').mouseover(function(){
+			var tab_id = $(this).attr('data-tab');
+
+			$('a.pinPoint').removeClass('current');
+			$('.pp-content').removeClass('current'); 
+			$(this).addClass('current');
+
+			$("#"+tab_id).addClass('current');
+			$('.overlay_hero').addClass('current');
+			$('.copy_box').addClass('current'); 	
+		//$('a.pinPointClose').addClass('current');		
+	});
+
+
+		$('a.pinPointClose').click(function(){
+		//var tab_id = $(this).attr('data-tab');
+
+		$('a.pinPoint').removeClass('current');
+		$('.pp-content').removeClass('current');
+		$('.overlay_hero').removeClass('current'); 
+		$('.copy_box').removeClass('current'); 	
+		$('a.pinPointClose').removeClass('current');		
+
+		//$(this).removeClass('current');
+		//$("#"+tab_id).removeClass('current');
+	});
+
+		$('a.pinPoint').mouseleave(function(){
+			var tab_id = $(this).attr('data-tab');
+
+			$('a.pinPoint').removeClass('current');
+			$('.pp-content').removeClass('current');
+			$('.overlay_hero').removeClass('current'); 
+			$('.copy_box').removeClass('current'); 		
+
+			$(this).removeClass('current');
+			$("#"+tab_id).removeClass('current');
+		});
+	</script>
+
+</body>
+
+</html>
